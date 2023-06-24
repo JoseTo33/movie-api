@@ -48,8 +48,6 @@ test("PUT -> 'URL/:id' should return status code 200 and res.body.name === movie
   expect(res.body.name).toBe(movie.name);
 });
 
-// /api/v1/movies/:id/actors
-
 test("POST -> 'URL/:id/actors' should return status code 200 and res.body.length === 1", async () => {
   const actorBody = {
     firstName: "Daniel",
@@ -72,8 +70,6 @@ test("POST -> 'URL/:id/actors' should return status code 200 and res.body.length
   await actor.destroy();
 });
 
-// /api/v1/movies/:id/directors
-
 test("POST -> 'URL/:id/directors' should return status code 200 and res.body.length === 1", async () => {
   const directorBody = {
     firstName: "Chris",
@@ -95,8 +91,6 @@ test("POST -> 'URL/:id/directors' should return status code 200 and res.body.len
 
   await director.destroy();
 });
-
-// /api/v1/movies/:id/genres
 
 test("POST -> 'URL/:id/genres' should return status code 200 and res.body.length === 1", async () => {
   const genreBody = {
